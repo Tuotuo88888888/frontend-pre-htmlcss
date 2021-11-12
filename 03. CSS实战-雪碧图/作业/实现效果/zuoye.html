@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东页尾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            min-width: 1200px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        .item1 {
+            width: 100%;
+            height: 120px;
+            border-bottom: 1px solid rgb(222, 222, 222);
+        }
+
+        .item1-center {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .item1-intro {
+            height: 42px;
+            line-height: 42px;
+            font-size: 18px;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item1-intro::before {
+            content: '';
+            display: block;
+            width: 37px;
+            height: 42px;
+            /* outline: 1px solid; */
+            margin-right: 10px;
+            background: url('./jd.png') no-repeat;
+        }
+
+        .item1-intro:nth-child(1)::before {
+            background-position: 0px -192px;
+        }
+
+        .item1-intro:nth-child(2)::before {
+            background-position: -41px -192px;
+        }
+
+        .item1-intro:nth-child(3)::before {
+            background-position: -82px -192px;
+        }
+
+        .item1-intro:nth-child(4)::before {
+            background-position: -123px -192px;
+        }
+
+        .item2 {
+            width: 80%;
+            height: 180px;
+            border-bottom: 1px solid rgb(222, 222, 222);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 20px;
+            color: #666;
+        }
+
+        .item2 dt {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 22px;
+            color: #666;
+        }
+
+        .item2 dd {
+            line-height: 22px;
+            font-size: 12px;
+            color: #666;
+            font-weight: 200;
+        }
+
+        .item2 h4 {
+            margin-bottom: 15px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .item2 p {
+            width: 180px;
+            height: 54px;
+            font-size: 12px;
+            font-weight: 100;
+        }
+
+        .item2 a {
+            float: right;
+            text-decoration: none;
+            color: #666;
+            font-weight: 100;
+            font-size: 12px;
+        }
+
+        .item3 {
+            text-align: center;
+            margin: 10px;
+            font-weight: 300;
+        }
+
+        .item3 a::after {
+            content: '|';
+            margin-left: 10px;
+        }
+
+        .item3 a:last-child::after {
+            content: '';
+        }
+
+        .item3>a {
+            text-decoration: none;
+            font-size: 12px;
+            color: rgb(102, 102, 102);
+            margin-left: 5px;
+        }
+
+        .item4 {
+            text-align: center;
+            font-weight: 200;
+        }
+
+        .item4 a::after {
+            content: '|';
+            margin: 0 10px;
+        }
+
+        .item4 a:last-child::after {
+            content: '';
+        }
+
+        .item4>a {
+            text-decoration: none;
+            font-size: 12px;
+            color: rgb(153, 153, 153);
+        }
+
+        .global>a::before {
+            content: "";
+            width: 15px;
+            height: 12px;
+            display: block;
+            /* outline: 1px solid; */
+            margin-right: 10px;
+            background: url('./jd.png') no-repeat;
+        }
+
+        .global>a:nth-child(1)::before {
+            background-position: -107px -155px;
+        }
+
+        .global>a:nth-child(2)::before {
+            background-position: -167px -155px;
+        }
+
+        .global>a:nth-child(3)::before {
+            background-position: -148px -155px;
+        }
+
+        .global>a:nth-child(4)::before {
+            background-position: -127px -155px;
+        }
+
+        .global>a:nth-child(5)::before {
+            background-position: -107px -171px;
+        }
+
+
+        .global {
+            display: flex;
+            justify-content: center;
+        }
+
+        .global>a {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand {
+            width: 80%;
+            margin: 0 auto;
+            height: 37px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand>div {
+            width: 103px;
+            height: 32px;
+            /* outline: 1px solid; */
+            background: url('./jd.png') no-repeat;
+        }
+
+        .brand>div:nth-child(1) {
+            background-position: -204px -111px;
+        }
+
+        .brand>div:nth-child(2) {
+            background-position: -204px -74px;
+        }
+
+        .brand>div:nth-child(3) {
+            background-position: -204px -37px;
+        }
+
+        .brand>div:nth-child(4) {
+            background-position: 0px -155px;
+        }
+
+        .brand>div:nth-child(5) {
+            background-position: -204px -149px;
+        }
+
+        .brand>div:nth-child(6) {
+            background-position: -204px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">
+            <div class="item1-center">
+                <div class="item1-intro">品类齐全，轻松购物</div>
+                <div class="item1-intro">多仓直发，极速配送</div>
+                <div class="item1-intro">正品行货，精致服务</div>
+                <div class="item1-intro">天天低价，畅选无忧</div>
+            </div>
+        </div>
+        <div class="item2">
+            <dl>
+                <dt>购物指南</dt>
+                <dd>购物流程</dd>
+                <dd>会员介绍</dd>
+                <dd>生活旅行</dd>
+                <dd>常见问题</dd>
+                <dd>大家电</dd>
+                <dd>联系客服</dd>
+            </dl>
+            <dl>
+                <dt>配送方式</dt>
+                <dd>上门自提</dd>
+                <dd>211限时达</dd>
+                <dd>配送服务查询</dd>
+                <dd>海外配送</dd>
+            </dl>
+            <dl>
+                <dt>支付方式</dt>
+                <dd>货到付款</dd>
+                <dd>在线支付</dd>
+                <dd>分期付款</dd>
+                <dd>公司转账</dd>
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd>售后政策</dd>
+                <dd>价格保护</dd>
+                <dd>退款说明</dd>
+                <dd>返修/退换货</dd>
+                <dd>取消订单</dd>
+            </dl>
+            <dl>
+                <dt>特色服务</dt>
+                <dd>夺宝岛</dd>
+                <dd>DIY装机</dd>
+                <dd>延保服务</dd>
+                <dd>京东E卡</dd>
+                <dd>京东通信</dd>
+                <dd>京鱼座智能</dd>
+            </dl>
+            <div>
+                <h4>京东自营覆盖区县</h4>
+                <p>京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+                <a href="#">查看详情 > </a>
+            </div>
+        </div>
+        <p class="item3">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">联系客服</a>
+            <a href="#">合作招商</a>
+            <a href="#">商家帮助</a>
+            <a href="#">营销中心</a>
+            <a href="#">手机京东</a>
+            <a href="#">友情链接</a>
+            <a href="#">销售联盟</a>
+            <a href="#">京东社区</a>
+            <a href="#">风险监控</a>
+            <a href="#">隐私政策</a>
+            <a href="#">京东公益</a>
+            <a href="#">English Site</a>
+            <a href="#">Media & IR</a>
+        </p>
+        <p class="item4">
+            <a href="#">京公网安备 11000002000088号</a>
+            <a href="#">京ICP备11041704号</a>
+            <a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+            <a href="#">新出发京零 字第大120007号</a>
+        </p>
+        <p class="item4">
+            <a href="#">互联网出版许可证编号新出网证(京)字150号</a>
+            <a href="#">出版物经营许可证</a>
+            <a href="#">网络文化经营许可证京网文[2020]6112-1201号</a>
+            <a href="#">违法和不良信息举报电话：4006561155</a>
+        </p>
+        <p class="item4">
+            <a href="#">Copyright © 2004 - 2021 京东JD.com 版权所有</a>
+            <a href="#">消费者维权热线：4006067733</a>
+            <a href="#">经营证照</a>
+            <a href="#">(京)网械平台备字(2018)第00003号</a>
+            <a href="#">营业执照</a>
+        </p>
+        <p class="item4 global">
+            <a href="#">Global Site</a>
+            <a href="#">Сайт России</a>
+            <a href="#">Situs Indonesia</a>
+            <a href="#">Sitio de España</a>
+            <a href="#">เว็บไซต์ประเทศไทย</a>
+        </p>
+        <p class="item4">
+            <a href="#">京东旗下网站：京东钱包</a>
+            <a href="#">京东云</a>
+            <a href="#">网络内容从业人员违法违规行为举报电话：4006561155-3</a>
+        </p>
+        <div class="brand">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>
