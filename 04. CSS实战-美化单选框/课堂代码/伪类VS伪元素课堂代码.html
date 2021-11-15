@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类伪元素选择器</title>
+    <style>
+        /* - :*first-child*
+        - :*nth-child*
+        - :*last-child* 示例 */
+
+        /* E:first-child : 只要这个 E 元素是它的父级的第一个子元素就选中 */
+
+        /* p:fisrt-child{
+            color : red;
+        }
+        p:last-child{
+            color : red;
+        } */
+
+        /* ul:nth-child(2){
+            color: red;
+        } */
+
+        /* type */
+        /* - :*first-of-type*
+        - :*nth-of-type*
+        - :*last-of-type* */
+
+        /* ul:first-of-type{
+            color: red;
+        } */
+
+        /* .test:first-of-type{
+            color: red;
+        } */
+
+        /* .test:last-of-type{
+            color: red;
+        } */
+
+        /* .test:nth-of-type(2){
+            color: red;
+        } */
+
+
+        /* input:checked {
+            width: 50px;
+            height: 50px;
+        } */
+
+        /* 第一行 */
+        /* p::first-line{
+            color: red;
+        } */
+        /* 第一个字母 */
+        /* p::first-letter{
+            font-size: 32px;
+            font-style: italic;
+            color: red;
+        }
+        input::placeholder{
+            color: red;
+        } */
+
+        p::before{
+            content: '&';
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            outline: 1px solid;
+        }
+        p::after{
+            content : '@'
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 伪类选择器 -->
+    <!-- <div>
+        <span>123213</span>
+        <div></div>
+        <p class="test">Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <span>Lorem, ipsum.</span>
+        <p class="test">Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <p class="test">Lorem ipsum dolor sit.</p>
+        <div></div>
+    </div>
+    <div>----------</div>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div><input type="radio" name="gender" id="" checked></div>
+    <div><input type="radio" name="gender" id=""></div>
+    <input type="checkbox" name="" id="" checked> -->
+
+    <!-- 伪元素选择器 -->
+
+    <!-- <p clas>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, adipisci illo harum ut voluptate ullam velit
+        accusamus ea natus vero, non iste? Beatae, in natus? Pariatur consequuntur exercitationem aut, porro cupiditate
+        quis, inventore eveniet illo quaerat magni sit natus accusamus ipsum voluptate. Enim, sapiente ad nemo
+        distinctio officia nulla nisi.</p>
+
+    <input type="text" name="" id="" placeholder="请填写姓名"> -->
+
+    <!-- before 和 after 伪元素选择器 -->
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+/* 任务 1:美化单选框 */
+.swiperBtn{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    bottom: 30px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+input{
+    display: none;
+}
+
+label[for="btn1"]{
+    left: 35%;
+}
+label[for="btn2"]{
+    left: 40%;
+}
+label[for="btn3"]{
+    left: 45%;
+}
+label[for="btn4"]{
+    left: 50%;
+}
+label[for="btn5"]{
+    left: 55%;
+}
+label[for="btn6"]{
+    left: 60%;
+}
+label[for="btn7"]{
+    left: 65%;
+}
+
+
+/* 任务 2:设置单选框点击效果 */
+
+#btn1:checked~ul{
+    margin-left: 0;
+}
+
+#btn1:checked~label[for="btn1"]{
+    background-color: red;
+}
+
+#btn2:checked~ul{
+    margin-left: -857px;
+}
+
+
+#btn2:checked~label[for="btn2"]{
+    background-color: red;
+}
+
+#btn3:checked~ul{
+    margin-left: calc(-857px * 2);
+}
+
+
+#btn3:checked~label[for="btn3"]{
+    background-color: red;
+}
+
+#btn4:checked~ul{
+    margin-left: calc(-857px * 3);
+}
+
+
+#btn4:checked~label[for="btn4"]{
+    background-color: red;
+}
+
+#btn5:checked~ul{
+    margin-left: calc(-857px * 4);
+}
+
+
+#btn5:checked~label[for="btn5"]{
+    background-color: red;
+}
+
+#btn6:checked~ul{
+    margin-left: calc(-857px * 5);
+}
+
+
+#btn6:checked~label[for="btn6"]{
+    background-color: red;
+}
+
+#btn7:checked~ul{
+    margin-left: calc(-857px * 6);
+}
+
+
+#btn7:checked~label[for="btn7"]{
+    background-color: red;
+}

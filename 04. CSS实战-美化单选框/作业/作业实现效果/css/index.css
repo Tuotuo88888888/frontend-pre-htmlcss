@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* body 设置弹性盒属性是为了让最外层容器水平垂直居中 */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282c34;
+}
+
+/* 最外层容器 */
+
+.container {
+    width: 700px;
+    height: 250px;
+    color: #607291;
+    background-color: #fff;
+    /* outline: 1px solid; */
+    overflow: hidden;
+}
+
+/* 设置每个选项卡项目名称的样式 */
+
+label {
+    float: left;
+    width: 20%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #e5e9ea;
+    /* transition: all .5s; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 设置弹性盒属性主要为了让图标和文字水平垂直居中 */
+    cursor: pointer;
+    /* outline: 1px solid; */
+}
+
+label:hover {
+    background-color: #fff;
+}
+
+/* 设置图标大小以及和右侧文字稍微有一点间隙 */
+
+label>img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* 隐藏所有的单选按钮 */
+
+input {
+    display: none;
+}
+
+/* 单选按钮被选中时相邻的 label 颜色改变 */
+
+input:checked+label {
+    background-color: #fff;
+}
+
+/* 至此，我们的选项卡项目名称区域就设置完毕了
+接下来开始设置选项卡内容区域 */
+
+ul {
+    display: flex;
+    width: 3500px;
+    height: 210px;
+    transition: all .5s;
+    /* outline: 1px solid blue; */
+}
+
+ul>li {
+    list-style: none;
+    /* 本来 width 应该为 700px，高度应该是 210px */
+    /* 因为设置了 padding，所以宽高需要减去对应的 padding 值 */
+    width: 620px;
+    height: 130px;
+    padding: 40px;
+    /* outline: 1px solid red; */
+}
+
+ul>li>img {
+    float: left;
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+}
+
+ul>li>h2{
+    font-weight: 300;
+}
+
+ul>li>p {
+    /* 首行缩进两个字符 */
+    text-indent: 2em;
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+#tab1:checked~ul {
+    margin-left: 0;
+}
+
+#tab2:checked~ul {
+    margin-left: -700px;
+}
+
+#tab3:checked~ul {
+    margin-left: -1400px;
+}
+
+#tab4:checked~ul {
+    margin-left: -2100px;
+}
+
+#tab5:checked~ul {
+    margin-left: -2800px;
+}

@@ -1,0 +1,76 @@
+/* 请按照要求完成下列的 CSS 代码 */
+
+input {
+    /* 隐藏所有的单选按钮 */
+    display: none;
+}
+
+label {
+    /* 请完善 label 的样式，从而达到美化单选框的目的 */
+    /* 设置浮动 */
+    float: left;
+    /* 设置宽度为 20% */
+    width: 20%;
+    /* 设置高度为 40px */
+    height: 40px;
+    /* 设置行高为 40px */
+    line-height: 40px;
+    /* 设置文本对其方式为居中 */
+    text-align: center;
+    /* 设置字体大小为 14px */
+    font-size: 14px;
+    /* 设置字重为 700 */
+    font-weight: 700;
+    /* 设置背景颜色为 #e5e9ea */
+    background-color: #e5e9ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 设置弹性盒属性主要为了让图标和文字水平垂直居中 */
+    /* 设置鼠标手势为 pointer */
+    cursor: pointer;
+}
+
+label:hover {
+    /* 设置 hover 时背景颜色为白色 */
+    background-color: #fff;
+}
+
+label>img {
+    /* 设置图片宽度为 20px */
+    width: 20px;
+    /* 设置图片高度为 20px */
+    height: 20px;
+    /* 设置右边距为 5px */
+    margin-right: 5px;
+}
+
+input:checked+label {
+    /* 单选按钮被选中时相邻的 label 颜色变为白色 */
+    background-color: #fff;
+}
+
+#tab1:checked~ul {
+    /* 第一个单选框被选中时，ul 的 margin-left 为 0 */
+    margin-left: 0;
+}
+
+#tab2:checked~ul {
+    /* 第一个单选框被选中时，ul 的 margin-left 为 -700 */
+    margin-left: -700px;
+}
+
+#tab3:checked~ul {
+    /* 第一个单选框被选中时，ul 的 margin-left 为 -1400 */
+    margin-left: -1400px;
+}
+
+#tab4:checked~ul {
+    /* 第一个单选框被选中时，ul 的 margin-left 为 -2100 */
+    margin-left: -2100px;
+}
+
+#tab5:checked~ul {
+    /* 第一个单选框被选中时，ul 的 margin-left 为 -2800 */
+    margin-left: -2800px;
+}
