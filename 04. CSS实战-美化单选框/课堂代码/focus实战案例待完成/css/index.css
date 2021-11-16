@@ -1,0 +1,42 @@
+ul {
+    width: 260px;
+    margin: 10px auto;
+    list-style: none;
+}
+
+ul li {
+    width: 260px;
+    height: 60px;
+    line-height: 60px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    color: #000;
+    font-family: 'Opan Sans', sans-serif;
+    font-size: 1em;
+    height: 50px;
+    padding: 0 16px;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.button {
+    height: 50px;
+    width: 292px;
+    background: #009dff;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #00c8ff;
+}
